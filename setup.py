@@ -28,21 +28,23 @@ def read_requirements(filename):
 
 long_description=read_file("README.md")
 setup(
-    name='tkitDemo', #修改包名字-
-    version='0.0.0.2                                 ',
-    description='Terry toolkit tkitDemo',
+    name='tkit_mlp_pytorch', #修改包名字-
+    version='0.0.0.1',
+    description='Terry toolkit mlp pytorch',
     author='Terry Chan',
     author_email='napoler2008@gmail.com',
-    url='http://www.terrychan.org/python_libs_demo/',
-    install_requires=read_requirements('requirements.txt'),  # 指定需要安装的依赖
+    url='https://github.com/napoler/mlp-pytorch.git',
+    # install_requires=read_requirements('requirements.txt'),  # 指定需要安装的依赖
     long_description=long_description,
     long_description_content_type="text/markdown",
-    # install_requires=[
-    #     # 'beautifulsoup4==4.7.1',
+    install_requires=[
+        'pytorch-lightning>=1.2.10',
+        # 'pytorch-lightning>=1.2.10',
 
 
-    # ],
-    packages=['Demo'])
+
+    ],
+    packages=['tkit_mlp_pytorch'])
 
 """
 pip freeze > requirements.txt
